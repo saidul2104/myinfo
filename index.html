@@ -13,7 +13,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Custom Animations */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -22,13 +21,12 @@
             animation: fadeIn 1s ease-out;
         }
 
-        /* Button Hover Effect */
         .btn-hover-effect:hover {
             transform: scale(1.05);
             transition: all 0.3s ease-in-out;
         }
 
-        /* Custom Background and Text Colors */
+        
         .bg-gradient-multi {
             background: linear-gradient(135deg, #f0f4c3, #c8e6c9, #bbdefb, #d1c4e9);
         }
@@ -45,7 +43,6 @@
             color: black;
         }
 
-        /* Loading Screen Styles */
         #loading {
             position: fixed;
             top: 0;
@@ -72,12 +69,10 @@
 </head>
 <body class="bg-gradient-multi text-black">
 
-    <!-- Header Section -->
     <header class="bg-blue-100 text-black py-12 text-center fade-in relative">
         <div class="container mx-auto">
-            <img src="Me1-EDIT.jpg" alt="Shuvo's Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg transform hover:scale-105 transition-all duration-300 md:w-48 md:h-48">
-<h1 class="text-4xl font-bold sm:text-5xl">Md. Saidul Islam Shuvo</h1>
-
+            <img src="Me1-EDIT.jpg" alt="Shuvo's Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg transform hover:scale-105 transition-all duration-300">
+            <h1 class="text-5xl font-bold">Md. Saidul Islam Shuvo</h1>
             <p class="text-xl mt-3">Web Developer | CSE Student</p>
             <div class="flex justify-center mt-6 space-x-6">
                 <a href="https://www.linkedin.com/in/md-saidul2104/" target="_blank" class="text-black hover:text-gray-600 transition-transform transform hover:scale-125"><i class="fab fa-linkedin text-3xl"></i></a>
@@ -86,14 +81,13 @@
                 <a href="https://www.facebook.com/shuvo2104" target="_blank" class="text-black hover:text-gray-600 transition-transform transform hover:scale-125"><i class="fab fa-facebook text-3xl"></i></a>
             </div>
             <div class="mt-8 space-x-6">
-              <a href="Md.Saidul islam shuvo (1).pdf" download="Shuvo_CV.pdf" class="inline-block bg-white text-blue-700 px-4 py-2 rounded-lg text-base sm:px-8 sm:py-3 text-lg btn-hover-effect">Download CV</a>
- <button id="hire-me-button" class="inline-block border-2 border-black text-black px-8 py-3 rounded-lg text-lg hover:bg-black hover:text-white transition-all btn-hover-effect">Hire Me</button>
+                <a href="Md.Saidul islam shuvo (1).pdf" download="Shuvo_CV.pdf" class="inline-block bg-white text-blue-700 px-8 py-3 rounded-lg text-lg btn-hover-effect">Download CV</a>
+                <button id="hire-me-button" class="inline-block border-2 border-black text-black px-8 py-3 rounded-lg text-lg hover:bg-black hover:text-white transition-all btn-hover-effect">Hire Me</button>
             </div>
         </div>
         <div class="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-blue-700"></div>
     </header>
 
-    <!-- Loading Screen -->
     <div id="loading">
         <div class="w-1/3 bg-gray-200 p-2 rounded-md">
             <div class="progress-bar"></div>
@@ -101,7 +95,6 @@
         </div>
     </div>
 
- 
     <section id="about" class="py-16 bg-green-100 fade-in text-black">
         <div class="container mx-auto text-center">
             <h2 class="text-5xl font-semibold mb-8">About Me</h2>
@@ -109,7 +102,29 @@
         </div>
     </section>
 
-  
+    <section id="hobbies" class="py-16 bg-yellow-100 fade-in text-black">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-semibold mb-8">My Hobbies</h2>
+            <ul class="list-none space-y-4">
+                <li>
+                    <button id="story-reading" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">Story Reading</button>
+                </li>
+                <li>
+                    <button id="travelling" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">Travelling</button>
+                </li>
+                <li>
+                    <button id="click-photos" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">Click Photos</button>
+                </li>
+            </ul>
+            <div id="photo-gallery" class="mt-8 hidden">
+                <h3 class="text-3xl font-semibold mb-4">Photo Gallery</h3>
+                <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Images will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="skills" class="py-16 bg-yellow-100 fade-in text-black">
         <div class="container mx-auto text-center">
             <h2 class="text-5xl font-semibold mb-12">Skills</h2>
@@ -127,37 +142,38 @@
                     <h3 class="text-lg font-medium">Networking (SMTP, FTP)</h3>
                 </div>
                 <div class="bg-white shadow-lg p-6 rounded-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                    <i class="fab fa-linux text-4xl mb-6 text-blue-700"></i>
-                    <h3 class="text-lg font-medium">Linux (Ubuntu), GitHub</h3>
+                    <i class="fas fa-cogs text-4xl mb-6 text-blue-700"></i>
+                    <h3 class="text-lg font-medium">Cisco Packet Tracer</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-16 bg-blue-100 fade-in text-black">
+    <section id="contact" class="py-16 bg-blue-100 fade-in text-black">
         <div class="container mx-auto text-center">
-            <h2 class="text-5xl font-semibold mb-8">Experience</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
-                <div class="bg-gray-100 shadow-lg p-8 rounded-lg hover:shadow-xl transition-all duration-300">
-                    <h3 class="text-2xl font-semibold mb-4">News Executive - ScienceBee</h3>
-                    <p class="text-left">I worked as a news executive for ScienceBee, the largest Bangla news portal focusing on technology. I managed content and published tech-related news stories for a wide audience.</p>
-                </div>
-                <div class="bg-gray-100 shadow-lg p-8 rounded-lg hover:shadow-xl transition-all duration-300">
-                    <h3 class="text-2xl font-semibold mb-4">Seasonal Manager - Royal Auto Car Servicing Center</h3>
-                    <p class="text-left">I managed operations, ensuring excellent customer service and operational efficiency during peak seasons at Royal Auto Car Servicing Center.</p>
-                </div>
-            </div>
+            <h2 class="text-5xl font-semibold mb-8">Contact Me</h2>
+            <p class="text-lg mb-6">You can reach out to me via email or by using the contact form below:</p>
+            <p class="text-lg">Email: <a href="mailto:mdsishuvo254@gmail.com" class="text-blue-700 hover:text-blue-900">mdsishuvo254@gmail.com</a></p>
         </div>
     </section>
 
     <script>
-        document.getElementById('hire-me-button').addEventListener('click', function() {
-            var loadingElement = document.getElementById('loading');
-            loadingElement.style.display = 'flex'; 
-            setTimeout(function() {
-                loadingElement.style.display = 'none'; 
-                window.location.href = 'contact.html';
-            }, 1000); 
+        document.getElementById("hire-me-button").addEventListener("click", function() {
+            alert("Thank you for considering to hire me!");
+        });
+
+        document.getElementById("click-photos").addEventListener("click", function() {
+            document.getElementById("photo-gallery").classList.toggle("hidden");
+        });
+
+        const imageGallery = document.getElementById("gallery");
+        const images = ["photos-001/IMG20210305061508_00.jpg", "photos-001/IMG20210305101132_00.jpg", "photos-001/IMG20210306092130_00.jpg", "photos-001/IMG20210306114836_00.jpg", "photos-001/IMG20210306120413_00.jpg", "photos-001/IMG20210616061141_00.jpg", "photos-001/IMG20210731180434_00.jpg", "photos-001/IMG20210731182600_00.jpg", "photos-001/IMG20211028061031_00.jpg", "photos-001/IMG20211028061211_00.jpg", "photos-001/IMG20211028061308_00.jpg", "photos-001/IMG20211114153759_00.jpg", "photos-001/IMG_20211031_160915.jpg", "photos-001/IMG_20211102_083445.jpg", "photos-001/IMG_20211103_171552.jpg", "photos-001/IMG_20220804_163125_404.jpg", "photos-001/IMG_20240207_073319_574.jpg", "photos-001/IMG_20240709_172219_616.jpg", "photos-001/IMG_20240709_174137_783.jpg", "photos-001/IMG_20240912_132607_611.jpg", "photos-001/pm_1715520901242_cmp.jpg", "photos-001/pm_1715520903424_cmp.jpg", "photos-001/pm_1715520905909_cmp.jpg", "photos-001/pm_1715520931815_cmp.jpg", "photos-001/pm_1715520977586_cmp.jpg", "photos-001/pm_1715521063878_cmp.jpg", "photos-001/pm_1715521064108_cmp.jpg", "photos-001/pm_1715521114201_cmp.jpg", "photos-001/pm_1715521114985_cmp.jpg"]; // Replace with actual image paths
+
+        images.forEach((img) => {
+            const imgElement = document.createElement("img");
+            imgElement.src = img;
+            imgElement.classList.add("w-full", "rounded-lg", "shadow-lg");
+            imageGallery.appendChild(imgElement);
         });
     </script>
 </body>
