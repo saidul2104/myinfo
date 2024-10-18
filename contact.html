@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Shuvo Islam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Loading animation */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            display: none;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 5px;
+            background: #4caf50;
+            animation: loadingBar 0.4s linear forwards;
+        }
+        @keyframes loadingBar {
+            100% { width: 100%; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-t from-blue-100 to-green-100 text-black">
+    <div id="loading">
+        <div class="w-1/3 bg-gray-200 p-2 rounded-md">
+            <div class="progress-bar"></div>
+            <p class="text-center text-white mt-2">Loading... <span id="loading-text">1%</span></p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-green-100 fade-in text-black">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-semibold mb-8">Contact Me</h2>
+            <p class="text-xl mb-4">Phone: +8801603198657</p>
+            <p class="text-xl mb-6">Mail: mdsishuvo254@gmail.com</p>
+            <form id="contact-form" action="sendmail.php" method="POST" class="max-w-lg mx-auto space-y-4">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700">
+                <input type="email" name="email" placeholder="Your Email" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700">
+                <textarea name="message" placeholder="Your Message" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700"></textarea>
+                <button type="submit" class="w-full bg-blue-700 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition-all duration-300">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var loadingElement = document.getElementById('loading');
+            var loadingText = document.getElementById('loading-text');
+            var progressBar = document.querySelector('.progress-bar');
+
+            loadingElement.style.display = 'flex'; // Show loading screen
+
+            var progress = 1;
+            var interval = setInterval(function() {
+                progress += 2.5;
+                loadingText.textContent = Math.min(100, Math.floor(progress)) + '%';
+                progressBar.style.width = Math.min(100, progress) + '%';
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    
+                    document.getElementById('contact-form').submit();
+                }
+            }, 10); 
+        });
+    </script>
+</body>
+</html>
