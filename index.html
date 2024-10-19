@@ -26,23 +26,53 @@
             transition: all 0.3s ease-in-out;
         }
 
-        
         .bg-gradient-multi {
             background: linear-gradient(135deg, #f0f4c3, #c8e6c9, #bbdefb, #d1c4e9);
         }
+
         .bg-blue-100 {
             background-color: #bbdefb;
         }
+
         .bg-green-100 {
             background-color: #c8e6c9;
         }
+
         .bg-yellow-100 {
             background-color: #fff9c4;
         }
+
         .text-black {
             color: black;
         }
-
+ 
+        <!-- Add this to your CSS or inside a <style> tag -->
+    
+        .science-card {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+    
+        .science-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+    
+        .science-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+    
+        .science-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+    
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
         #loading {
             position: fixed;
             top: 0;
@@ -62,6 +92,7 @@
             background: #4caf50;
             animation: loadingBar 1s linear forwards;
         }
+
         @keyframes loadingBar {
             100% { width: 100%; }
         }
@@ -102,6 +133,75 @@
         </div>
     </section>
 
+    <section id="experience" class="py-16 bg-blue-100 fade-in text-black">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-semibold mb-12">Experience</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                    <i class="fas fa-newspaper text-4xl mb-6 text-blue-700"></i>
+                    <h3 class="text-lg font-medium">Science News Executive</h3>
+                    <p class="text-md mt-2">I worked as a Science News Executive at <a href="https://www.sciencebee.com.bd/" target="_blank" class="text-blue-700 hover:underline">Science Bee</a>, the largest Bangla online science news portal. </div> 
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                    <i class="fas fa-tools text-4xl mb-6 text-blue-700"></i>
+                    <h3 class="text-lg font-medium">Seasonal Manager</h3>
+                    <p class="text-md mt-2">I have been a seasonal manager at <span class="font-semibold">Royal Auto Car Servicing Center</span>, helping manage the business effectively during high-demand periods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="science-bee-style" class="py-16 bg-blue-100 text-black">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-semibold mb-8">Explore Science Articles of mine </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="science-card hover:shadow-lg transform hover:scale-105 transition-transform duration-300 p-6 rounded-lg bg-white">
+                    <i class="fas fa-brain text-4xl mb-4 text-blue-600"></i>
+                    <h3 class="text-lg font-medium mb-2">মানব মস্তিষ্ক: এক অনন্য বিস্ময়</h3>
+                    <p class="text-md">Discover the incredible wonders of the human brain in this captivating article.</p>
+                    <a href="https://www.sciencebee.com.bd/daily-science/%e0%a6%ae%e0%a6%be%e0%a6%a8%e0%a6%ac-%e0%a6%ae%e0%a6%b8%e0%a7%8d%e0%a6%a4%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%95-%e0%a6%8f%e0%a6%95-%e0%a6%85%e0%a6%a8%e0%a6%a8%e0%a7%8d%e0%a6%af-%e0%a6%ac%e0%a6%bf/" target="_blank" class="inline-block mt-4 text-blue-700 hover:underline">Read More</a>
+                </div>
+    
+                <div class="science-card hover:shadow-lg transform hover:scale-105 transition-transform duration-300 p-6 rounded-lg bg-white">
+                    <i class="fas fa-flask text-4xl mb-4 text-green-600"></i>
+                    <h3 class="text-lg font-medium mb-2">ক্লিক কেমেস্ট্রি রসায়নে</h3>
+                    <p class="text-md">Explore the magic of click chemistry and its implications in modern science.</p>
+                    <a href="https://www.sciencebee.com.bd/daily-science/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%bf%e0%a6%95-%e0%a6%95%e0%a7%87%e0%a6%ae%e0%a7%87%e0%a6%b8%e0%a7%8d%e0%a6%9f%e0%a7%8d%e0%a6%b0%e0%a6%bf-%e0%a6%b0%e0%a6%b8%e0%a6%be%e0%a7%9f%e0%a6%a8%e0%a7%87/" target="_blank" class="inline-block mt-4 text-blue-700 hover:underline">Read More</a>
+                </div>
+    
+                <div class="science-card hover:shadow-lg transform hover:scale-105 transition-transform duration-300 p-6 rounded-lg bg-white">
+                    <i class="fas fa-globe text-4xl mb-4 text-yellow-600"></i>
+                    <h3 class="text-lg font-medium mb-2">বিজ্ঞান শেখার ওয়েবসাইট</h3>
+                    <p class="text-md">A curated list of the best websites for learning science topics and discoveries.</p>
+                    <a href="https://www.sciencebee.com.bd/daily-science/%e0%a6%ac%e0%a6%bf%e0%a6%9c%e0%a7%8d%e0%a6%9e%e0%a6%be%e0%a6%a8-%e0%a6%b6%e0%a7%87%e0%a6%96%e0%a6%be%e0%a6%b0-%e0%a6%93%e0%a6%af%e0%a6%bc%e0%a7%87%e0%a6%ac%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%9f/#google_vignette" target="_blank" class="inline-block mt-4 text-blue-700 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="py-16 bg-yellow-100 fade-in text-black">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-semibold mb-12">Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="bg-white shadow-lg p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
+                    <i class="fab fa-html5 text-5xl mb-4 text-orange-600"></i>
+                    <h3 class="text-lg font-medium">HTML</h3>
+                </div>
+                <div class="bg-white shadow-lg p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
+                    <i class="fab fa-css3-alt text-5xl mb-4 text-blue-600"></i>
+                    <h3 class="text-lg font-medium">CSS</h3>
+                </div>
+                <div class="bg-white shadow-lg p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
+                    <i class="fab fa-js text-5xl mb-4 text-yellow-600"></i>
+                    <h3 class="text-lg font-medium">JavaScript</h3>
+                </div>
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                    <i class="fas fa-database text-4xl mb-6 text-blue-700"></i>
+                    <h3 class="text-lg font-medium">PHP & MySQL</h3>
+                    <p class="text-md mt-2">Experienced in back-end development and database management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="hobbies" class="py-16 bg-yellow-100 fade-in text-black">
         <div class="container mx-auto text-center">
             <h2 class="text-5xl font-semibold mb-8">My Hobbies</h2>
@@ -125,56 +225,38 @@
         </div>
     </section>
 
-    <section id="skills" class="py-16 bg-yellow-100 fade-in text-black">
+   
+    
+    <footer id="footer" class="bg-gray-900 text-white py-8">
         <div class="container mx-auto text-center">
-            <h2 class="text-5xl font-semibold mb-12">Skills</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                <div class="bg-white shadow-lg p-6 rounded-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                    <i class="fas fa-code text-4xl mb-6 text-blue-700"></i>
-                    <h3 class="text-lg font-medium">HTML, CSS, JavaScript</h3>
-                </div>
-                <div class="bg-white shadow-lg p-6 rounded-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                    <i class="fas fa-database text-4xl mb-6 text-blue-700"></i>
-                    <h3 class="text-lg font-medium">PHP, MySQL</h3>
-                </div>
-                <div class="bg-white shadow-lg p-6 rounded-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                    <i class="fas fa-network-wired text-4xl mb-6 text-blue-700"></i>
-                    <h3 class="text-lg font-medium">Networking (SMTP, FTP)</h3>
-                </div>
-                <div class="bg-white shadow-lg p-6 rounded-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                    <i class="fas fa-cogs text-4xl mb-6 text-blue-700"></i>
-                    <h3 class="text-lg font-medium">Cisco Packet Tracer</h3>
-                </div>
-            </div>
+            <p id="typewriter-text" class="text-xl"></p>
         </div>
-    </section>
-
-    <section id="contact" class="py-16 bg-blue-100 fade-in text-black">
-        <div class="container mx-auto text-center">
-            <h2 class="text-5xl font-semibold mb-8">Contact Me</h2>
-            <p class="text-lg mb-6">You can reach out to me via email or by using the contact form below:</p>
-            <p class="text-lg">Email: <a href="mailto:mdsishuvo254@gmail.com" class="text-blue-700 hover:text-blue-900">mdsishuvo254@gmail.com</a></p>
-        </div>
-    </section>
-
+    </footer>
+    
+       
+    
     <script>
-        document.getElementById("hire-me-button").addEventListener("click", function() {
-            alert("Thank you for considering to hire me!");
+        const text = " @2024 Shuvo Islam | All Rights Reserved."; 
+    let index = 0;
+
+    function typeWriter() {
+        if (index < text.length) {
+            document.getElementById("typewriter-text").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 100); // Adjust speed by changing the time interval
+        }
+    }
+
+    window.onload = typeWriter;
+        document.getElementById('hire-me-button').addEventListener('click', function() {
+            alert('Please contact me via email: mdsishuvo254@gmail.com');
         });
 
-        document.getElementById("click-photos").addEventListener("click", function() {
-            document.getElementById("photo-gallery").classList.toggle("hidden");
-        });
-
-        const imageGallery = document.getElementById("gallery");
-        const images = ["IMG20210305061508_00.jpg", "IMG20210305101132_00.jpg", "IMG20210306092130_00.jpg", "IMG20210306114836_00.jpg", "IMG20210306120413_00.jpg", "IMG20210616061141_00.jpg", "IMG20210731180434_00.jpg", "IMG20210731182600_00.jpg", "IMG20211028061031_00.jpg", "IMG20211028061211_00.jpg", "IMG20211028061308_00.jpg", "IMG20211114153759_00.jpg", "IMG_20211031_160915.jpg", "IMG_20211102_083445.jpg", "IMG_20211103_171552.jpg", "IMG_20220804_163125_404.jpg", "IMG_20240207_073319_574.jpg", "IMG_20240709_172219_616.jpg", "IMG_20240709_174137_783.jpg", "IMG_20240912_132607_611.jpg", "pm_1715520901242_cmp.jpg", "pm_1715520903424_cmp.jpg", "pm_1715520905909_cmp.jpg", "pm_1715520931815_cmp.jpg", "pm_1715520977586_cmp.jpg", "pm_1715521063878_cmp.jpg", "pm_1715521064108_cmp.jpg", "pm_1715521114201_cmp.jpg", "pm_1715521114985_cmp.jpg"]; // Replace with actual image paths
-
-        images.forEach((img) => {
-            const imgElement = document.createElement("img");
-            imgElement.src = img;
-            imgElement.classList.add("w-full", "rounded-lg", "shadow-lg");
-            imageGallery.appendChild(imgElement);
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading');
+            loadingScreen.style.display = 'none';
         });
     </script>
+
 </body>
 </html>
