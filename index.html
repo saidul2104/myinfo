@@ -207,7 +207,7 @@
             <h2 class="text-5xl font-semibold mb-8">My Hobbies</h2>
             <ul class="list-none space-y-4">
                 <li>
-                    <button id="story-reading" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">Story Reading</button>
+                    <div id="story-reading" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">Story Reading</div>
                 </li>
                 <li>
                     <button id="travelling" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">Travelling</button>
@@ -224,8 +224,7 @@
             </div>
         </div>
     </section>
-
-   
+    
     
     <footer id="footer" class="bg-gray-900 text-white py-8">
         <div class="container mx-auto text-center">
@@ -239,6 +238,66 @@
         const text = " @2024 Shuvo Islam | All Rights Reserved."; 
     let index = 0;
 
+    
+        const clickPhotosButton = document.getElementById('click-photos');
+        const photoGallery = document.getElementById('photo-gallery');
+        const gallery = document.getElementById('gallery');
+    
+        
+        const photos = [
+            "photos-001/IMG20210305061508_00.jpg",
+"photos-001/IMG20210305101132_00.jpg",
+"photos-001/IMG20210306092130_00.jpg",
+"photos-001/IMG20210306114836_00.jpg",
+"photos-001/IMG20210306120413_00.jpg",
+"photos-001/IMG20210616061141_00.jpg",
+"photos-001/IMG20210731180434_00.jpg",
+"photos-001/IMG20210731182600_00.jpg",
+"photos-001/IMG20211028061031_00.jpg",
+"photos-001/IMG20211028061211_00.jpg",
+"photos-001/IMG20211028061308_00.jpg",
+"photos-001/IMG20211114153759_00.jpg",
+"photos-001/IMG_20211031_160915.jpg",
+"photos-001/IMG_20211102_083445.jpg",
+"photos-001/IMG_20211103_171552.jpg",
+"photos-001/IMG_20220804_163125_404.jpg",
+"photos-001/IMG_20240207_073319_574.jpg",
+"photos-001/IMG_20240709_172219_616.jpg",
+"photos-001/IMG_20240709_174137_783.jpg",
+"photos-001/IMG_20240912_132607_611.jpg",
+"photos-001/pm_1715520901242_cmp.jpg",
+"photos-001/pm_1715520903424_cmp.jpg",
+"photos-001/pm_1715520905909_cmp.jpg",
+"photos-001/pm_1715520931815_cmp.jpg",
+"photos-001/pm_1715520977586_cmp.jpg",
+"photos-001/pm_1715521063878_cmp.jpg",
+"photos-001/pm_1715521064108_cmp.jpg",
+"photos-001/pm_1715521114201_cmp.jpg",
+"photos-001/pm_1715521114985_cmp.jpg"
+        ];
+    
+        clickPhotosButton.addEventListener('click', function() {
+            if (photoGallery.classList.contains('hidden')) {
+                photoGallery.classList.remove('hidden');
+                photoGallery.classList.add('fade-in');
+                loadGallery();
+            } else {
+                photoGallery.classList.add('hidden');
+            }
+        });
+    
+        function loadGallery() {
+            gallery.innerHTML = ''; // Clear existing images
+            photos.forEach(function(photo) {
+                const imgElement = document.createElement('img');
+                imgElement.src = photo;
+                imgElement.alt = 'Gallery Photo';
+                imgElement.className = 'w-full h-60 object-cover rounded-lg shadow-lg transition-transform transform hover:scale-105';
+                gallery.appendChild(imgElement);
+            });
+        }
+    
+   
     function typeWriter() {
         if (index < text.length) {
             document.getElementById("typewriter-text").innerHTML += text.charAt(index);
