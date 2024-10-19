@@ -206,34 +206,47 @@
         <div class="container mx-auto text-center">
             <h2 class="text-5xl font-semibold mb-8">My Hobbies</h2>
             <ul class="list-none space-y-4">
+                <!-- Story Reading -->
                 <li>
-                    <div id="story-reading" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">Story Reading</div>
+                    <div id="story-reading" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">
+                        <img src="462319429_463940260025855_4082003081604842724_n.jpg" alt="Story Reading" class="w-32 h-32 mx-auto rounded-full hover:opacity-80 transition-opacity">
+                        Story Reading
+                    </div>
                 </li>
+                
+                <!-- Travelling -->
                 <li>
-                    <button id="travelling" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">Travelling</button>
+                    <div id="travelling" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">
+                        <img src="459724700_446441968442351_3702351359812939465_n.jpg" alt="Travelling" class="w-32 h-32 mx-auto rounded-full hover:opacity-80 transition-opacity">
+                        Travelling
+                    </div>
                 </li>
+                
+                <!-- Click Photos -->
                 <li>
-                    <button id="click-photos" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">Click Photos</button>
+                    <div id="click-photos" class="text-lg text-blue-700 hover:text-blue-900 transition-transform transform hover:scale-105">
+                        <img src="pm_1715520931815_cmp.jpg" alt="Clicking Photos" class="w-32 h-32 mx-auto rounded-full hover:opacity-80 transition-opacity">
+                        Clicking Photos
+                    </div>
                 </li>
             </ul>
+    
+            <!-- Photo Gallery (Visible when "Click Photos" is clicked) -->
             <div id="photo-gallery" class="mt-8 hidden">
                 <h3 class="text-3xl font-semibold mb-4">Photo Gallery</h3>
                 <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Images will be dynamically loaded here -->
+                    <!-- Add photo elements dynamically or hardcoded -->
+                    <img src="galler.jpg" alt="Gallery Photo 1" class="w-full h-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity">
+                    <img src="gallery-photo2.jpg" alt="Gallery Photo 2" class="w-full h-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity">
+                    <!-- Add more gallery photos as needed -->
                 </div>
             </div>
         </div>
     </section>
     
     
-    <footer id="footer" class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto text-center">
-            <p id="typewriter-text" class="text-xl"></p>
-        </div>
-    </footer>
-    
-       
-    
+  
+ 
     <script>
         const text = " @2024 Shuvo Islam | All Rights Reserved."; 
     let index = 0;
@@ -245,35 +258,35 @@
     
         
         const photos = [
-            "IMG20210305061508_00.jpg",
-"IMG20210305101132_00.jpg",
-"IMG20210306092130_00.jpg",
-"IMG20210306114836_00.jpg",
-"IMG20210306120413_00.jpg",
-"IMG20210616061141_00.jpg",
-"IMG20210731180434_00.jpg",
-"IMG20210731182600_00.jpg",
-"IMG20211028061031_00.jpg",
-"IMG20211028061211_00.jpg",
-"IMG20211028061308_00.jpg",
-"IMG20211114153759_00.jpg",
-"IMG_20211031_160915.jpg",
-"IMG_20211102_083445.jpg",
-"IMG_20211103_171552.jpg",
-"IMG_20220804_163125_404.jpg",
-"IMG_20240207_073319_574.jpg",
-"IMG_20240709_172219_616.jpg",
-"IMG_20240709_174137_783.jpg",
-"IMG_20240912_132607_611.jpg",
-"pm_1715520901242_cmp.jpg",
-"pm_1715520903424_cmp.jpg",
-"pm_1715520905909_cmp.jpg",
-"pm_1715520931815_cmp.jpg",
-"pm_1715520977586_cmp.jpg",
-"pm_1715521063878_cmp.jpg",
-"pm_1715521064108_cmp.jpg",
-"pm_1715521114201_cmp.jpg",
-"pm_1715521114985_cmp.jpg"
+            "photos-001/IMG20210305061508_00.jpg",
+"photos-001/IMG20210305101132_00.jpg",
+"photos-001/IMG20210306092130_00.jpg",
+"photos-001/IMG20210306114836_00.jpg",
+"photos-001/IMG20210306120413_00.jpg",
+"photos-001/IMG20210616061141_00.jpg",
+"photos-001/IMG20210731180434_00.jpg",
+"photos-001/IMG20210731182600_00.jpg",
+"photos-001/IMG20211028061031_00.jpg",
+"photos-001/IMG20211028061211_00.jpg",
+"photos-001/IMG20211028061308_00.jpg",
+"photos-001/IMG20211114153759_00.jpg",
+"photos-001/IMG_20211031_160915.jpg",
+"photos-001/IMG_20211102_083445.jpg",
+"photos-001/IMG_20211103_171552.jpg",
+"photos-001/IMG_20220804_163125_404.jpg",
+"photos-001/IMG_20240207_073319_574.jpg",
+"photos-001/IMG_20240709_172219_616.jpg",
+"photos-001/IMG_20240709_174137_783.jpg",
+"photos-001/IMG_20240912_132607_611.jpg",
+"photos-001/pm_1715520901242_cmp.jpg",
+"photos-001/pm_1715520903424_cmp.jpg",
+"photos-001/pm_1715520905909_cmp.jpg",
+"photos-001/pm_1715520931815_cmp.jpg",
+"photos-001/pm_1715520977586_cmp.jpg",
+"photos-001/pm_1715521063878_cmp.jpg",
+"photos-001/pm_1715521064108_cmp.jpg",
+"photos-001/pm_1715521114201_cmp.jpg",
+"photos-001/pm_1715521114985_cmp.jpg"
         ];
     
         clickPhotosButton.addEventListener('click', function() {
@@ -318,4 +331,77 @@
     </script>
 
 </body>
+
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <div class="profile-header bg-white shadow-md rounded-lg mb-6">
+        <div class="cover-photo">
+            <img class="w-full h-64 object-cover rounded-t-lg" src="459724700_446441968442351_3702351359812939465_n.jpg" alt="Cover Photo">
+        </div>
+        <div class="profile-details flex items-center p-6">
+            <img class="w-36 h-36 rounded-full border-4 border-white -mt-20" src="462319429_463940260025855_4082003081604842724_n.jpg" alt="Profile Photo">
+            <div class="profile-name ml-6">
+                <h1 class="text-3xl font-bold">Md. Saidul Islam Shuvo (sayeem)</h1>
+                <p class="text-gray-500 mt-2">424 followers • 89 following</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bio/Intro Section -->
+    <div class="intro bg-white p-6 shadow-md rounded-lg mb-6">
+        <h2 class="text-2xl font-semibold mb-4">Intro</h2>
+        <p class="text-gray-700 mb-2">BG: B+8th (last donate Mar 2024)</p>
+        <p class="text-gray-700 mb-4">"NONE IS TO NONE UNDER THE SUN"</p>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 mb-4">Edit Bio</button>
+        <ul class="list-disc list-inside text-gray-700">
+            <li>Profile: Digital creator</li>
+            <li>Former Ex-Executive News Reporter at ScienceBee</li>
+            <li>Studies B.Sc (Engineering) in Computer Science and Engineering (CSE) at Green University of Bangladesh</li>
+        </ul>
+    </div>
+
+    <!-- Details Section -->
+    <div class="details bg-white p-6 shadow-md rounded-lg mb-6">
+        <h2 class="text-2xl font-semibold mb-4">Details</h2>
+        <ul class="list-none space-y-2 text-gray-700">
+            <li>Went to <span class="font-semibold">Malapara High School</span></li>
+            <li>Lives in <span class="font-semibold">Dhaka, Bangladesh</span></li>
+            <li>From <span class="font-semibold">Comilla</span></li>
+            <li>Single</li>
+            <li><a href="https://www.linkedin.com/in/md-saidul2104" class="text-blue-600 hover:underline" target="_blank">LinkedIn Profile</a></li>
+        </ul>
+    </div>
+
+    <!-- Posts Section -->
+    <div class="posts bg-white p-6 shadow-md rounded-lg">
+        <h2 class="text-2xl font-semibold mb-6">Posts</h2>
+        <div class="post flex justify-between items-center p-4 bg-gray-50 rounded-lg mb-8">
+            <p class="text-gray-700" style="color:black;">What's on your mind?</p>
+            <div>
+                <button class="bg-red-600 text-white px-4 py-2 rounded-lg mr-2 hover:bg-red-700">Live video</button>
+                <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Photo/video</button>
+            </div>
+        </div>
+        <div class="post-list">
+            <!-- Example Post -->
+            <div class="post-item p-4 bg-gray-50 rounded-lg mb-4">
+                <p class="text-gray-700">Md. Saidul Islam Shuvo is with Naik Md. Abdul Motalab.</p>
+                <p class="text-gray-500">10 May 2023</p>
+                <div class="certificate bg-white p-4 rounded-lg mt-4 shadow-md">
+                    <img src="eeeee.jpg" alt="Certificate of Appreciation" class="w-64 h-auto rounded-lg shadow-md mb-1">
+                    <p class="text-gray-700">
+                        I am proud to work with <span class="font-semibold"  style="color: green;">Science Bee</span>, my esteemed siblings. This is my first workplace where I got the opportunity to work after a two-stage selection. Although I stepped down in November due to personal reasons, Science Bee will always remain a unique and memorable chapter in my life. Much respect and love to all.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>
+<footer id="footer" class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center">
+        <p id="typewriter-text" class="text-xl"></p>
+    </div>
+</footer>
